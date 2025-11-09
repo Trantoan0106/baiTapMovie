@@ -1,0 +1,5 @@
+.btn-fix, .btn-fix *{
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  mix-blend-mode: normal !important;
+}

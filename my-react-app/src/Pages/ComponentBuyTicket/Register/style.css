@@ -1,0 +1,62 @@
+:root{
+  --slate-100:#e5e7eb; --slate-300:#cbd5e1; --slate-700:#2a3344;
+  --bg1:#1b2230; --bg2:#0b0e14;
+  --amber:#ffad33; --amber-soft:#ffd08a;
+  --green:#22c55e; --red:#ef4444; --empty:#fff7ed;
+}
+
+/* section wrapper (nền giống ChoosePosition) */
+.rs-wrap{
+  padding:32px 16px 0;
+  background: radial-gradient(1200px 600px at 50% 0%, var(--bg1) 0%, var(--bg2) 60%);
+}
+
+/* card trung tâm */
+.rs-card{
+  max-width:1100px; margin:0 auto; border-radius:20px; padding:24px;
+  border:1px solid var(--slate-700);
+  background:linear-gradient(180deg, rgba(32,38,52,.65), rgba(20,24,34,.55));
+  box-shadow:0 20px 80px rgba(0,0,0,.35);
+  color:var(--slate-100);
+}
+
+/* title */
+.rs-title{ font-size:22px; font-weight:800; letter-spacing:.02em; margin:0 0 6px; }
+.rs-sub{ color:#facc15; margin:0 0 18px; }
+
+/* form */
+.rs-form{
+  display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:flex-end;
+}
+.rs-field{ display:flex; flex-direction:column; gap:8px; }
+.rs-label{ font-size:14px; color:var(--slate-300); }
+.rs-req{ color:#f87171; }
+
+.rs-input{
+  height:44px; padding:0 14px; border-radius:12px;
+  border:1px solid #485269; background:rgba(20,25,36,.55); color:var(--slate-100);
+  outline:none; transition:border .15s ease, box-shadow .15s ease;
+}
+.rs-input:focus{ border-color:#6b7280; box-shadow:0 0 0 3px rgba(148,163,184,.25); }
+
+.rs-actions{ grid-column:1 / -1; text-align:center; padding-top:6px; }
+.rs-btn{
+  padding:10px 16px; border-radius:12px; font-weight:800; border:none;
+  color:#111827; background:#fff;
+  box-shadow:0 6px 16px rgba(0,0,0,.2);
+}
+
+/* legend */
+.rs-legend{
+  display:flex; gap:18px; flex-wrap:wrap; align-items:center;
+  margin-top:18px; padding-top:12px; border-top:1px solid var(--slate-700);
+  color:var(--slate-300); font-size:14px;
+}
+.rs-legend-item{ display:inline-flex; align-items:center; gap:8px; }
+.rs-dot{ width:24px; height:16px; border-radius:6px; border:2px solid transparent; display:inline-block; }
+.rs-dot--selected{ background:var(--green); border-color:var(--green); }
+.rs-dot--reserved{ background:#e5e7eb; border-color:#e5e7eb; }
+.rs-dot--empty{ background:var(--empty); border-color:#f59e0b; }
+
+/* responsive */
+@media (max-width: 768px){ .rs-form{ grid-template-columns:1fr; } }

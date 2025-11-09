@@ -1,0 +1,145 @@
+/* ============================
+   Cinema Corner – helpers
+   ============================ */
+
+/* 1) Hàng featured: scroll ngang + snap mượt (mobile) */
+.cinema-scroll-x {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-left: 16px; /* đỡ “dính” sát mép trái */
+}
+
+.cinema-scroll-x .snap-item {
+  scroll-snap-align: start;
+}
+
+/* 2) Ẩn scrollbar (giữ cuộn được) */
+.cinema-scroll-x::-webkit-scrollbar {
+  height: 8px;               /* nếu muốn ẩn hoàn toàn: đặt 0 */
+}
+.cinema-scroll-x::-webkit-scrollbar-track {
+  background: transparent;
+}
+.cinema-scroll-x::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 999px;
+}
+@supports (scrollbar-color: auto) {
+  .cinema-scroll-x {
+    scrollbar-width: thin;   /* Firefox */
+    scrollbar-color: rgba(148,163,184,.25) transparent;
+  }
+}
+
+/* 3) Draggable card: cursor */
+.draggable-card {
+  cursor: grab;
+  touch-action: none;
+}
+.draggable-card:active {
+  cursor: grabbing;
+}
+
+/* 4) Card ảnh: đảm bảo không méo */
+.cc-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 5) Hover elevation nhẹ cho card (fallback nếu thiếu shadow util) */
+.cc-card-hover {
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+.cc-card-hover:hover {
+  box-shadow: 0 14px 32px rgba(2,6,23,.18), 0 6px 12px rgba(2,6,23,.10);
+  transform: translateY(-2px);
+}
+
+/* 6) Typography trong bài chi tiết (nếu không dùng @tailwind/typography) */
+.cc-prose h2 {
+  margin-top: 1.25rem;
+  margin-bottom: .5rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.cc-prose p {
+  margin: .5rem 0 1rem;
+  color: rgb(82 82 91); /* zinc-600 */
+}
+.cc-prose ul, .cc-prose ol {
+  margin: .5rem 0 1rem;
+  padding-left: 1.25rem;
+}
+.cc-prose li { margin: .25rem 0; }
+
+/* 7) Giảm chuyển động cho người dùng sensitive */
+@media (prefers-reduced-motion: reduce) {
+  .cc-card-hover,
+  .cinema-scroll-x {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+/* 8) Nền mờ “glass” cho cụm Tabs (nếu cần dùng bằng class thuần) */
+.cc-glass {
+  background: rgba(255,255,255,.65);
+  backdrop-filter: saturate(140%) blur(8px);
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+  border: 1px solid rgba(148,163,184,.25);
+  border-radius: 16px;
+}
+
+/* 9) Pill tab state thuần CSS (nếu không muốn viết nhiều Tailwind) */
+.cc-pill {
+  position: relative;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-weight: 600;
+  color: rgb(63 63 70); /* zinc-700 */
+  transition: color .2s ease, background-color .2s ease, box-shadow .2s ease;
+  white-space: nowrap;
+}
+.cc-pill:hover {
+  color: rgb(24 24 27);      /* zinc-900 */
+  background: white;
+}
+.cc-pill.is-active {
+  color: white;
+  background: linear-gradient(90deg,#6366f1,#a855f7,#ec4899);
+  box-shadow: 0 10px 24px rgba(99,102,241,.28);
+}
+
+/* 10) Gradient underline cho tiêu đề “Góc điện ảnh” (nếu muốn class riêng) */
+.cc-title-underline {
+  display: block;
+  width: 112px;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#6366f1,#ec4899);
+}
+
+/* ===== Animated gradient text & pill for ActionDock ===== */
+@keyframes cc-sheen {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Chữ gradient chuyển động (dùng cho “Xáo bài”, “Reset”) */
+.cc-animated-gradient {
+  background-image: linear-gradient(90deg, #4338ca, #8b5cf6, #ec4899, #8b5cf6, #4338ca);
+  background-size: 300% 100%;
+  animation: cc-sheen 6s linear infinite;
+}
+
+/* Nút CTA gradient chạy mượt, vẫn dễ đọc vì text trắng */
+.cc-animated-pill {
+  background-image: linear-gradient(90deg, #4f46e5, #7c3aed, #ec4899, #7c3aed, #4f46e5);
+  background-size: 300% 100%;
+  animation: cc-sheen 6s linear infinite;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+}

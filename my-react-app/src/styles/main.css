@@ -1,0 +1,10 @@
+/* Trong file CSS global */
+.section-spacer {
+  margin-bottom: 8rem; /* hoặc 128px */
+}
+
+@media (min-width: 768px) {
+  .section-spacer {
+    margin-bottom: 12rem; /* hoặc 192px */
+  }
+}
