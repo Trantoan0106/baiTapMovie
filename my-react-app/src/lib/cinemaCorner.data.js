@@ -7,7 +7,7 @@ export const articles = [
     title: "Bố Già: Tiếng cười xen lẫn những lát cắt gia đình",
     excerpt:
       "Một câu chuyện đời thường nhưng chạm đúng cảm xúc: ấm áp, khắc khoải và rất Sài Gòn.",
-    cover: "../../public/corner/bo-gia-comback.jpg",
+    cover: "../../corner/bo-gia-comback.jpg",
     tags: ["Việt Nam", "Gia đình", "Review"],
     date: "2025-10-08",
     content : `<p>
@@ -23,7 +23,7 @@ Bên cạnh đó, nhà phát hành Galaxy Studio và ê-kíp sản xuất của 
     title: "Lật Mặt 7 – Một điều ước: Công thức quen mà vẫn nhiều cảm xúc",
     excerpt:
       "Phần 7 tiếp tục giữ nhịp nhanh, đan xen hành động – hài, nhưng điểm sáng là sự tử tế trong thông điệp.",
-    cover: "../../public/corner/latmat7.jpg",
+    cover: "../../corner/latmat7.jpg",
     tags: ["Việt Nam", "Hành động", "Hài", "Series Lật Mặt"],
     date: "2025-10-06",
     content: `
@@ -45,7 +45,7 @@ Tại thị trường Bắc Mỹ, "Lật mặt 7" ra mắt vào đúng tuần l�
     title: "The Wolverine: Khi người sói đi tìm bản ngã",
     excerpt:
       "Một chuyến phiêu lưu mang sắc thái u tối hơn, đào sâu nỗi cô độc của Logan giữa những lựa chọn khó khăn.",
-    cover: "../../public/corner/wolverine.jpg",
+    cover: "../../corner/wolverine.jpg",
     tags: ["Marvel", "Siêu anh hùng", "Phân tích"],
     date: "2025-10-05",
     content: `<p>
@@ -61,7 +61,7 @@ Châu Á đang là thị trường mà các nhà làm phim Hollywood hướng đ
     title: "Mưa Đỏ: Tráng ca bi hùng và nén tâm nhang ký ức",
     excerpt:
       "Tác phẩm chiến tranh lấy cảm hứng lịch sử, giàu cảm xúc với cách dựng trang nghiêm và hình ảnh ám ảnh.",
-    cover: "../../public/corner/muado.jpg",
+    cover: "../../corner/muado.jpg",
     tags: ["Việt Nam", "Chiến tranh", "Review"],
     date: "2025-10-04",
     content: `<p>
@@ -77,7 +77,7 @@ Phim có sự tham gia của nhiều nghệ sĩ trẻ, có những người lầ
     title: "Siêu Lừa Gặp Siêu Lầy: Màn tung hứng duyên dáng của phim heist Việt",
     excerpt:
       "Nhịp phim rộn ràng, dí dỏm; dàn nhân vật tung hứng tốt và vẫn giữ được chất duyên đặc trưng.",
-    cover: "../../public/corner/sieulua.jpg",
+    cover: "../../corner/sieulua.jpg",
     tags: ["Việt Nam", "Hài", "Heist"],
     date: "2025-10-03",
     content: `<p>
@@ -93,7 +93,7 @@ Thuộc phong cách hài hước với các “cú lừa” thông minh và lầ
     title: "8 bài học cuộc sống từ bộ phim 3 chàng ngốc",
     excerpt:
       "Lấy bối cảnh là một trường đại học hàng đầu ở Ấn Độ, bộ phim “3 chàng ngốc” xoay quanh những câu chuyện đời sinh viên của 3 chàng sinh viên có những tính cách và hoàn cảnh khác nhau.",
-    cover: "../../public/corner/20170805165113-idiot1.jpg",
+    cover: "../../corner/20170805165113-idiot1.jpg",
     tags: ["Ấn Độ", "Hài", "Heist"],
     date: "2025-10-9",
     content: `<p>
@@ -111,7 +111,7 @@ Bộ phim làm hài lòng người xem với một kết thúc có hậu và nhi
     title: "Phim điện ảnh “Doraemon” – một trong những bộ phim “thương hiệu” của kỳ nghỉ hè hàng năm, chuẩn bị trở lại với phòng vé Việt vào cuối tháng 5 này",
     excerpt:
       "Doraemon: Nobita Và Bản Giao Hưởng Địa Cầu” là phần thứ 43 trong loạt phim điện ảnh “Doraemon” 2D",
-    cover: "../../public/corner/DRM-4.jpg",
+    cover: "../../corner/DRM-4.jpg",
     tags: ["Nhật bản", "Hoạt hình", "Heist"],
     date: "2025-10-06",
     content: `<p>

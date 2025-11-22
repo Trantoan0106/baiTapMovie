@@ -7,7 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const API = "/cyber/api/QuanLyPhim/LayDanhSachBanner";
+const API =
+  "https://movienew.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachBanner";
 
 export default function CarouselBanner() {
   const [slides, setSlides] = React.useState([]);
@@ -15,7 +16,12 @@ export default function CarouselBanner() {
   const [error, setError] = React.useState("");
 
   React.useEffect(() => {
-    fetch(API)
+    setLoading(true);
+    fetch(API, {
+      headers: {
+        TokenCybersoft: import.meta.env.VITE_CYBERSOFT_TOKEN,
+      },
+    })
       .then((r) => {
         if (!r.ok) throw new Error("Fetch banner failed");
         return r.json();
@@ -25,12 +31,11 @@ export default function CarouselBanner() {
           id: b.maBanner,
           title: `Movie #${b.maPhim}`,
           href: `/movie/${b.maPhim}`,
-          image: b.hinhAnh.replace(
-            "https://movienew.cybersoft.edu.vn",
-            "/cyber"
-          ),
+          // DÙNG TRỰC TIẾP URL ẢNH GỐC
+          image: b.hinhAnh,
         }));
         setSlides(mapped);
+        setError("");
       })
       .catch((e) => setError(e.message || "Error"))
       .finally(() => setLoading(false));

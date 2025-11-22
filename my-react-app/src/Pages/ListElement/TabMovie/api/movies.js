@@ -52,13 +52,6 @@ return {
 }
 
 
-
-
-
-
-
-
-
 export async function getMovieById(id) {
   // API: /QuanLyPhim/LayThongTinPhim?MaPhim=1283
   const { data } = await api.get("/QuanLyPhim/LayThongTinPhim", {

@@ -4,7 +4,8 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import MovieItem from "../../ComponentHome/Movie/Movie3D/MovieItem"; // chỉnh path nếu khác dự án bạn
 
-const API = "/cyber/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01";
+const API =
+  "https://movienew.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01";
 
 // helpers nhỏ cho "mới ra mắt"
 const toDate = (s) => {
@@ -25,7 +26,12 @@ export default function MovieTabs() {
   // Fetch 1 lần
   React.useEffect(() => {
     setLoading(true);
-    fetch(API)
+    fetch(API, {
+      // ✅ Gửi kèm TokenCybersoft vì không còn proxy /cyber
+      headers: {
+        TokenCybersoft: import.meta.env.VITE_CYBERSOFT_TOKEN,
+      },
+    })
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
@@ -35,10 +41,7 @@ export default function MovieTabs() {
         const mapped = list.map((m) => ({
           id: m.maPhim,
           title: m.tenPhim,
-          poster: String(m.hinhAnh || "").replace(
-            "https://movienew.cybersoft.edu.vn",
-            "/cyber"
-          ),
+          poster: String(m.hinhAnh || ""),
           dangChieu: !!m.dangChieu,
           sapChieu: !!m.sapChieu,
           hot: !!m.hot,
