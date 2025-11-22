@@ -1,14 +1,19 @@
 // src/pages/ListElement/Product/data/products.js
 // Handmade data cho tab Product (4 items)
 
+const BASE = import.meta.env.BASE_URL || "/";
+
 const products = [
   {
     id: "conan-movie-cup",
     name: "Ly nước Conan – Phiên bản điện ảnh",
     desc:
       "Ly nhựa in nhân vật Conan/Đội thám tử nhí. Dung tích ~700ml, nắp kín kèm ống hút, phù hợp sưu tầm.",
-    img: "/product/drink3.jpg",
-    gallery: ["/product/conan-cup-1.jpg", "/product/conan-cup-2.jpg"],
+    img: `${BASE}product/drink3.jpg`,
+    gallery: [
+      `${BASE}product/conan-cup-1.jpg`,
+      `${BASE}product/conan-cup-2.jpg`,
+    ],
     category: "Movie Merchandise",
     provider: "Galaxy Cinema",
     tags: ["ly-nuoc", "conan", "merch"],
@@ -29,8 +34,11 @@ const products = [
     name: "Bộ ly ‘Bí Kíp Luyện Rồng’ (nhiều mẫu)",
     desc:
       "BST ly chủ đề rồng, nhiều mẫu sưu tầm. Chất liệu nhựa dày, ống hút kèm theo. Số lượng có hạn.",
-    img: "/product/drink2.jpg",
-    gallery: ["/product/dragons-cup-1.jpg", "/product/dragons-cup-2.jpg"],
+    img: `${BASE}product/drink2.jpg`,
+    gallery: [
+      `${BASE}product/dragons-cup-1.jpg`,
+      `${BASE}product/dragons-cup-2.jpg`,
+    ],
     category: "Movie Merchandise",
     provider: "Galaxy Cinema",
     tags: ["ly-nuoc", "dragons", "collection"],
@@ -51,8 +59,8 @@ const products = [
     name: "Capybara Merch Bundle",
     desc:
       "Combo Capybara siêu xinh: topper + ly 700ml + xô bắp ‘Yummy’. Phù hợp sưu tầm/làm quà tặng.",
-    img: "/product/capybara-app-co-online-min_1745917429070.jpg",
-    gallery: ["/product/capybara-bundle-1.jpg"],
+    img: `${BASE}product/capybara-app-co-online-min_1745917429070.jpg`,
+    gallery: [`${BASE}product/capybara-bundle-1.jpg`],
     category: "Seasonal Merchandise",
     provider: "Galaxy Cinema",
     tags: ["capybara", "combo", "merch"],
@@ -73,8 +81,8 @@ const products = [
     name: "Combo 3 ly nước lạnh (tùy chọn vị)",
     desc:
       "Chọn 3 trong các vị: chanh, cola, dâu… Ly nhựa nắp vòm kèm đá viên. Thích hợp đi nhóm bạn.",
-    img: "/product/drink1.jpg",
-    gallery: ["/product/iced-drink-trio-1.jpg"],
+    img: `${BASE}product/drink1.jpg`,
+    gallery: [`${BASE}product/iced-drink-trio-1.jpg`],
     category: "Beverage",
     provider: "Galaxy Cinema",
     tags: ["beverage", "combo", "refresh"],
