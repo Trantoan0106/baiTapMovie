@@ -11,11 +11,16 @@ export default function CinemaCorner() {
       .slice(0, 7);
   }, []);
 
-  const xemTatCa = () =>
-    window.dispatchEvent(new CustomEvent("pile:view", { detail: "grid" }));
+
+const xemTatCa = () =>
+  window.dispatchEvent(new CustomEvent("pile:view", { detail: "grid" }));
+
+
 
   const shuffle = () => window.dispatchEvent(new CustomEvent("pile:shuffle"));
   const reset = () => window.dispatchEvent(new CustomEvent("pile:reset"));
+
+  
 
   return (
     <main className="py-8">
@@ -28,11 +33,11 @@ export default function CinemaCorner() {
         </h1>
         <div className="mt-2 h-1.5 w-28 rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500" />
         <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-zinc-500">
-          Bình luận phim, cảm nhận nhanh và các góc nhìn thú vị về những tác
-          phẩm hot.
+          Bình luận phim, cảm nhận nhanh và các góc nhìn thú vị về những tác phẩm hot.
         </p>
       </section>
 
+      
       <section className="relative mx-auto mt-4 w-full max-w-[1180px] px-4">
         <div className="mb-4">
           <ActionDock
@@ -43,6 +48,7 @@ export default function CinemaCorner() {
           />
         </div>
 
+        
         <div className="relative min-h-[560px] pb-20">
           <ArticleGrid items={topStack} />
         </div>

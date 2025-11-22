@@ -13,7 +13,6 @@ export default function Movie() {
   const { data, isLoading, error } = useMoviesQuery(params);
   const movies = Array.isArray(data?.results) ? data.results.filter(Boolean) : [];
 
-  // state trailer modal
   const [openTrailer, setOpenTrailer] = useState(false);
   const [trailerMeta, setTrailerMeta] = useState({ title: '', trailer: '' });
   const nav = useNavigate();
