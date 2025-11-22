@@ -68,7 +68,7 @@ export default function AboutUs() {
             handle="aurora.cinema"
             status="Mở cửa • 9:00–23:30"
             contactText="Liên hệ"
-            avatarUrl="../../../../80801-BODY_ (15).jpg" // ảnh trong public/images/cinema.jpg
+            avatarUrl="/80801-BODY_ (15).jpg"
             miniAvatarUrl="/images/cinema.jpg"
             showUserInfo={true}
             enableTilt={true}
