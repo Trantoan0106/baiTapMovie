@@ -4,6 +4,7 @@ import ProfileCard from "./ProfileCard"; // nếu có index.js
 import "./index.css";
 
 export default function AboutUs() {
+  const BASE = import.meta.env.BASE_URL || "/";
   return (
     <section className="relative z-10 my-24 md:my-1 min-h-[40vh] bg-[#0b0e16] text-white">
       <div className="mx-auto max-w-7xl px-6 pt-6 pb-12 grid gap-10 lg:grid-cols-2 items-center">
@@ -68,8 +69,8 @@ export default function AboutUs() {
             handle="aurora.cinema"
             status="Mở cửa • 9:00–23:30"
             contactText="Liên hệ"
-            avatarUrl="/80801-BODY_ (15).jpg"
-            miniAvatarUrl="/images/cinema.jpg"
+            avatarUrl={`${BASE}images/80801-BODY_ (15).jpg`}
+            miniAvatarUrl={`${BASE}images/cinema.jpg`}
             showUserInfo={true}
             enableTilt={true}
             enableMobileTilt={false}

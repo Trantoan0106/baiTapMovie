@@ -1,13 +1,15 @@
 
 // Nguồn dữ liệu cục bộ cho phần "Tin khuyến mãi".
 // Dùng trực tiếp: import promos from "@/data/promos";
+const BASE = import.meta.env.BASE_URL || "/";
 
 const promos = [
   {
     id: "zalo-30",
     title: "ZaloPay giảm đến 30% khi mua vé",
     desc: "Nhập mã trên ZaloPay, giảm tối đa 30% (áp dụng điều kiện).",
-    img: "/promotion/zalopay-2_1756131451068.jpg",
+        img: `${BASE}promotion/zalopay-2_1756131451068.jpg`,
+
     href: "/uu-dai/zalopay",
     provider: "ZaloPay",
     discountType: "percent",
@@ -23,7 +25,8 @@ const promos = [
     id: "liobank-60k",
     title: "Liobank giảm ngay 60K khi mua vé",
     desc: "Thanh toán bằng thẻ Liobank nhận ưu đãi 60.000đ.",
-    img: "/promotion/lio-t9-galaxy-banner-app-1135x660_1758894341772.jpg",
+        img: `${BASE}promotion/lio-t9-galaxy-banner-app-1135x660_1758894341772.jpg`,
+
     href: "/uu-dai/liobank",
     provider: "Liobank",
     discountType: "amount",
@@ -39,7 +42,8 @@ const promos = [
     id: "clicktopay-50k",
     title: "Click to Pay ưu đãi 50K",
     desc: "Thanh toán qua Click to Pay giảm ngay 50.000đ cho đơn đủ điều kiện.",
-    img: "/promotion/click-to-pay-visa-1_1756349730515.jpg",
+        img: `${BASE}promotion/click-to-pay-visa-1_1756349730515.jpg`,
+
     href: "/uu-dai/click-to-pay",
     provider: "VISA / Click to Pay",
     discountType: "amount",
@@ -55,7 +59,8 @@ const promos = [
     id: "shopeepay-50k",
     title: "ShopeePay giảm đến 50K dành cho Stars",
     desc: "Ưu đãi độc quyền cho Galaxy Stars khi thanh toán bằng ShopeePay.",
-    img: "/promotion/1135-sym-tan-an_1758187407676.jpg",
+        img: `${BASE}promotion/1135-sym-tan-an_1758187407676.jpg`,
+
     href: "/uu-dai/shopeepay",
     provider: "ShopeePay",
     discountType: "amount",
@@ -71,7 +76,8 @@ const promos = [
     id: "momo-20",
     title: "Momo Movie Day - Giảm 20%",
     desc: "Thứ 4 hàng tuần, thanh toán Momo giảm 20% tối đa 40.000đ.",
-    img: "/promotion/momo-galaxy-2_1756958593143.jpg",
+        img: `${BASE}promotion/momo-galaxy-2_1756958593143.jpg`,
+
     href: "/uu-dai/momo-movie-day",
     provider: "MoMo",
     discountType: "percent",
@@ -87,7 +93,8 @@ const promos = [
     id: "student-tuesday-40",
     title: "Student Tuesday - Giảm 40% vé 2D",
     desc: "Sinh viên học sinh giảm 40% vào thứ 3. Xuất trình thẻ để áp dụng.",
-    img: "/promotion/imax-treasure-hunt-5_1758703687529.jpg",
+        img: `${BASE}promotion/imax-treasure-hunt-5_1758703687529.jpg`,
+
     href: "/uu-dai/student-tuesday",
     provider: "Galaxy Cinema",
     discountType: "percent",
